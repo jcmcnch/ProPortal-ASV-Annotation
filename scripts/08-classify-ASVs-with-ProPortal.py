@@ -46,3 +46,16 @@ for astrLine in csv.reader(open(sys.argv[1]), csv.excel_tab):
 
     #add classification to a tuple that takes only unique values
     aClass.append(classification)
+
+#print results from last ASV
+uniqueMatches = set(aClass)
+aUniqueMatches = list(uniqueMatches)
+if len(aUniqueMatches) == 1:
+    print('\t'.join([ASVid, aUniqueMatches[0]]))
+if len(aUniqueMatches) > 1:
+    if ( len(list(filter(lambda x:'Synechococcus' in x, aUniqueMatches))) > 0 ) and ( len(list(filter(lambda x:'Prochlorococcus' in x, aUniqueMatches))) > 0 ):
+        classString = "Unclassified Cyanobiaceae with non-unique perfect matches to " + " and ".join(list(uniqueMatches))
+        print('\t'.join([ASVid, classString]))
+    else:
+        classString = list(uniqueMatches)[0].split("-")[0].split("_")[0]  + " with non-unique perfect matches to " + " and ".join(list(uniqueMatches))
+        print('\t'.join([ASVid, classString]))
