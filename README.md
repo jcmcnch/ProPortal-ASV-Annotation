@@ -11,4 +11,17 @@ Some example results are included here from the GP13 and GA03 BioGEOTRACES cruis
 
 Important notes:
 
-- Only set up to work for ASVs - may give spurious results for OTUs since centroids may not represent true biological sequence.
+- Only set up to work for ASVs - may give spurious results for OTUs since centroids may not represent the true biological sequence.
+
+Setup:
+
+- Conda environments are specified in `env/`
+- Unless you want to recreate or modify the database, you can just put an input fasta file in `ASVs-2-classify` and run the following scripts:
+
+```
+#will BLAST everything in the ASVs-2-classify folder
+./scripts/07-blast-all-datasets.sh
+
+#script requires BLAST results as sys.argv[1] (i.e. second argument after python script)
+./scripts/08-classify-ASVs-with-ProPortal.py blast-results/220123.Synechococcales.GA03.blastout.tsv > ProPortalReclassification/220124.GA03.results.tsv
+```
