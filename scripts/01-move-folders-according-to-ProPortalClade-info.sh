@@ -5,4 +5,4 @@ while read line ; do
 	folder=IMG_`echo $line | cut -f1 -d" "`
  	mv input-IMG-ids/$folder $outdir
 
-done < 220121_ProPortal_genome-clade-matching.tsv
+done < input-info/220121_ProPortal_genome-clade-matching.tsv
