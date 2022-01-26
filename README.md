@@ -1,6 +1,6 @@
 # ProPortal-ASV-Annotation
 
-This repository contains a BLAST database from [ProPortal](https://img.jgi.doe.gov/cgi-bin/proportal/main.cgi) that allows a user to assign ecotype-level taxonomy to *Cyanobiaceae* ASVs.
+This repository contains a BLAST database from [ProPortal](https://img.jgi.doe.gov/cgi-bin/proportal/main.cgi) that allows a user to assign ecotype-level taxonomy to *Synechococcales* ASVs.
 
 Here's how it works:
 
