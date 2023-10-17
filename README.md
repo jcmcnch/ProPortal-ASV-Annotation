@@ -1,5 +1,11 @@
 # ProPortal-ASV-Annotation
 
+*Important update (2023-10-17):*
+
+Some SSU rRNA sequences derived from the ProPortal database most likely are heterotrophic contaminants such as SAR11. Since I was assuming that all SSU rRNA sequences found in ProPortal must be Cyanobacteria (i.e. not anticipating potential contamination), the previous version of the BLAST database would incorrectly classify some ASVs from heterotrophic bacteria found in environmental samples as Cyanobacteria since they matched to these contaminants of ProPortal. This was rare, but did happen. Thank you to Lexi Jones-Kellett for pointing this out! This problem has now been fixed by using VSEARCH to classify SSU rRNA sequences. Anything that didn't match to Cyanobacteria was then filtered out.
+
+TL;DR - Use the new BLAST database and you will be fine. If you used the old BLAST db, re-run your analysis.
+
 This repository contains a BLAST database from [ProPortal](https://img.jgi.doe.gov/cgi-bin/proportal/main.cgi) that allows a user to assign ecotype-level taxonomy to *Synechococcales* ASVs.
 
 Here's how it works:
