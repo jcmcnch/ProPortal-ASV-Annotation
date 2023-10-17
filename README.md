@@ -2,7 +2,7 @@
 
 *Important update (2023-10-17):*
 
-Some SSU rRNA sequences derived from the ProPortal database most likely are heterotrophic contaminants such as SAR11. Since I was assuming that all SSU rRNA sequences found in ProPortal must be Cyanobacteria (i.e. not anticipating potential contamination), the previous version of the BLAST database would incorrectly classify some ASVs from heterotrophic bacteria found in environmental samples as Cyanobacteria since they matched to these contaminants of ProPortal. This was rare, but did happen. Thank you to Lexi Jones-Kellett for pointing this out! This problem has now been fixed by using VSEARCH to classify SSU rRNA sequences. Anything that didn't match to Cyanobacteria was then filtered out.
+One SSU rRNA sequence out of the 443 SSU rRNA sequences derived from the ProPortal database is most likely a heterotrophic contaminant (SAR11). Since I was assuming that all SSU rRNA sequences found in ProPortal must be Cyanobacteria (i.e. not anticipating potential contamination), the previous version of the BLAST database would incorrectly classify some ASVs from heterotrophic bacteria found in environmental samples as Cyanobacteria since they matched to these contaminants of ProPortal. This was rare, but can happen. Thank you to Lexi Jones-Kellett for pointing this out! This problem has now been fixed by using VSEARCH to classify SSU rRNA sequences. Anything that didn't match to Cyanobacteria was then filtered out. Only one sequence was flagged using this approach.
 
 TL;DR - Use the new BLAST database and you will be fine. If you used the old BLAST db, re-run your analysis.
 
