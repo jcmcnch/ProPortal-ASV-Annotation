@@ -1,0 +1,12 @@
+name: vsearch-env
+channels:
+  - bioconda/label/cf201901
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bzip2=1.0.6
+  - libgcc-ng=8.2.0
+  - libstdcxx-ng=8.2.0
+  - vsearch=2.10.4
+  - zlib=1.2.11
